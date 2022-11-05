@@ -37,5 +37,5 @@ if check_password():
 
         for i in range(100):
             bar.progress(i+1)
-            sleep(0.1)
+            sleep(0.05)
     
