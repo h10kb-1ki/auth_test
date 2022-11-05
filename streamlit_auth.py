@@ -33,18 +33,9 @@ if check_password():
     st.write("テストページです")
     btm = st.button("Click me")
     if btm:
-        st.markdown("""
-        <style>
-        .stProgress .st-bo {
-            background-color: green;
-        }
-        </style>
-        """, 
-        unsafe_allow_html=True)
+        bar = st.progress(0)
 
-        progress = st.progress(0)
-
-        for i in range(20):
-            progress.progress(i)
+        for i in range(100):
+            bar.progress(i+1)
             sleep(0.1)
     
